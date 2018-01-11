@@ -31,7 +31,7 @@ class Application
       search_term = req.params["q"]
 
       if !@@items.include?(search_term)
-        cart = cart + search_term
+        cart[0] = search_term
       else
         resp.write "error not found"
       end
